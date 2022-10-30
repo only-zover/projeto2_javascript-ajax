@@ -1,8 +1,7 @@
 # PROJETO 2 - JavaScript e AJAX
 
 >&emsp;Nessa segunda etapa do Projeto Prático, devem ser desenvolvidas as seguintes funcionalidades no lado cliente de uma aplicação web, tendo como base a interface desenvolvida no PROJETO 1 - HTML e CSS:<br><br>
->&emsp;**Login:** realização do login da aplicação. Sugestão de implementação: utilizar recursos como a API JavaScript de Local Storage ou Cookies.
-Busca de conteúdo: cada usuario depois de logado no sistema web deve ser capaz de realizar consultas a dados disponíveis na API JSON aberta selecionada pela equipe.<br><br>
+>&emsp;**Login:** realização do login da aplicação. Sugestão de implementação: utilizar recursos como a API JavaScript de Local Storage ou Cookies.<br><br>
 >&emsp;**Busca de conteúdo:** cada usuário depois de logado no sistema web deve ser capaz de realizar consultas a dados disponíveis na API JSON aberta selecionada pela equipe.
 
 ## Critérios de avaliação
