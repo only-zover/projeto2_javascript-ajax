@@ -11,7 +11,6 @@ bt.addEventListener('click', () => {
     list = JSON.stringify(list)
 
     var xhr = new XMLHttpRequest()
-        console.log('teste')
         xhr.open("POST", "https://reqres.in/api/login", true)
         xhr.setRequestHeader("Content-type", "application/json")
         xhr.send(list)
