@@ -8,7 +8,6 @@
     <title>Bitbucket | Git solution for teams using Jira</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
-
 </head>
 
 <body>
@@ -35,7 +34,8 @@
                             <a href="">Pricing</a>
                         </li>
                         <li>
-                            <a href="pages/login.html">Log in</a>
+                            <a id="loginbt" href="#">Log in</a>
+                            <a id="logoutbt" href="#">Log out</a>
                         </li>
                     </ul>
                     <div class="getit">
@@ -47,6 +47,10 @@
     </header>
     <main>
         <div class="container">
+            <div class="bt">
+                <a id="apibt" href="#">Consumir API</a>
+                <p id="msgerr"></p>
+            </div>
             <div class="txt1">
                 <h1>Code & CI/CD, optimized for teams using Jira</h1>
             </div>
@@ -61,7 +65,25 @@
                 <img src="public/img1.png" alt="">
             </div>
         </div>
+        <dialog id="modal">
+            <label id="labelUser" for="user">Email:</label>
+            <input type="text" name="user" id="user" placeholder="Email" required>
+            <label id="labelPassword" for="password">Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Senha">
+            <button id="bt" type="submit"><a href="#">Entrar</a></button>
+            <button id="exit" type="button"><a href="#">Sair</a></button>
+            <div id="msg"></div>
+        </dialog>
+        <dialog id="search">
+            <input type="text" name="searchbt" id="campo" placeholder="Nome do Pokémon">
+            <button id="searchbt" type="submit">Buscar</button>
+            <button id="closeapi" type="button"><a href="#">Sair</a></button>
+            <div id="container"></div>
+        </dialog>>
     </main>
+
+    <script type="module" src="scripts/main.js"></script>
+
 </body>
 
 </html>

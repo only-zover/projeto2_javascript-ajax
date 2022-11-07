@@ -1,3 +1,5 @@
+import { modal, loginBt, logoutBt } from './main.js'
+
 const bt = document.querySelector('#bt')
 const msg = document.querySelector('#msg')
 
@@ -9,9 +11,9 @@ const password = document.querySelector('#password')
 const labelPassword = document.querySelector('#labelPassword')
 let validPassword = false
 
-user.addEventListener('keyup', () => {checkUser()})
-password.addEventListener('keyup', () => {checkPassword()})
-bt.addEventListener('click', () => {login()})
+user.addEventListener('keyup', () => { checkUser() })
+password.addEventListener('keyup', () => { checkPassword() })
+bt.addEventListener('click', () => { login() })
 
 function login() {
     if (validUser && validPassword) {
@@ -19,11 +21,11 @@ function login() {
             "email": user.value,
             "password": password.value
         }
-    
+
         userInfo = JSON.stringify(userInfo)
-    
+
         var xhr = new XMLHttpRequest()
-    
+
         xhr.open("POST", "https://reqres.in/api/login", true)
         xhr.setRequestHeader("Content-type", "application/json")
         xhr.send(userInfo)
@@ -31,12 +33,15 @@ function login() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = xhr.responseText;
                 let token = data.split('"')[3]
-    
+
                 localStorage.setItem('token', token)
-                window.location.href = 'search.html'
+                modal.close()
+                loginBt.setAttribute('style', 'display: none')
+                logoutBt.setAttribute('style', 'display: inline')
+
             } else if (xhr.readyState == 4 && xhr.status == 400) {
                 msg.innerHTML = 'Email ou senha inválida'
-            } 
+            }
         }
     } else {
         msg.innerHTML = 'A senha e/ou email não podem ter menos de 3 caracteres'
@@ -66,3 +71,5 @@ function checkPassword() {
         validPassword = true
     }
 }
+
+export { bt, user, password, checkUser, checkPassword, login }
