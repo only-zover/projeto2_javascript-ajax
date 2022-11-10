@@ -1,5 +1,4 @@
-# GitHub Pages: https://only-zover.github.io/projeto2_javascript-ajax/
----
+# GitHub Pages:<br>https://only-zover.github.io/projeto2_javascript-ajax/
 # PROJETO 2 - JavaScript e AJAX
 
 >&emsp;Nessa segunda etapa do Projeto Prático, devem ser desenvolvidas as seguintes funcionalidades no lado cliente de uma aplicação web, tendo como base a interface desenvolvida no PROJETO 1 - HTML e CSS:<br><br>
